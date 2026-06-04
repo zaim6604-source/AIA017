@@ -7,17 +7,17 @@ const info = [
   {
     icon: '📍',
     label: 'Office Address',
-    lines: ['H-132, D Block, Satellite Town', '6th Road, Near Total Petrol Pump', 'Rawalpindi, Punjab'],
+    lines: ['B-343, Tingo Market, Commercial Area', 'Satellite Town, Islamabad', 'Rawalpindi, Punjab'],
   },
   {
     icon: '📞',
     label: 'Contact Numbers',
-    lines: ['051-4853259', '0333-3664912', '0347-0111494'],
+    lines: ['0314-5230994', '0333-5138529'],
   },
   {
     icon: '🏛️',
     label: 'License Details',
-    lines: ['License No. 0056 / RWP', 'Government Approved'],
+    lines: ['License No. 0444 / RWP', 'Government Approved'],
   },
   {
     icon: '🕐',
@@ -182,6 +182,7 @@ export default function Contact() {
           font-weight:600;
           color:#2b1a12;
           box-shadow:0 4px 14px rgba(0,0,0,.12);
+          z-index:10;
         }
 
         .ct-btns {
@@ -202,6 +203,7 @@ export default function Contact() {
           align-items:center;
           gap:6px;
           transition:.25s;
+          text-decoration:none;
         }
 
         .ct-btn-main {
@@ -232,9 +234,9 @@ export default function Contact() {
           <div style={{ textAlign: 'center', marginBottom: 60 }} className="reveal">
             <div className="ct-chip">Visit Us</div>
             <h2 className="ct-title">
-              Our Office in <span style={{color:'#b45309'}}>Rawalpindi</span>
+              Our Office in <span style={{ color: '#b45309' }}>Rawalpindi</span>
             </h2>
-            <p style={{ color:'#7c5a45', maxWidth:520, margin:'0 auto', lineHeight:1.7 }}>
+            <p style={{ color: '#7c5a45', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
               Meet our team in person and start your overseas career journey with expert guidance.
             </p>
           </div>
@@ -245,18 +247,18 @@ export default function Contact() {
             <div className="ct-card reveal">
 
               <div className="ct-company">
-                <div className="ct-logo">A</div>
+                <div className="ct-logo">A1</div>
                 <div>
-                  <div className="ct-name">Al-Amal Company</div>
-                  <div className="ct-lic">License No. 0056 / RWP</div>
+                  <div className="ct-name">A-1 Agency</div>
+                  <div className="ct-lic">License No. 0444 / RWP</div>
                 </div>
               </div>
 
               <div className="ct-info">
-                {info.map((item,i)=>(
+                {info.map((item, i) => (
                   <div key={i} className="ct-item">
                     <div className="ct-item-label">{item.label}</div>
-                    {item.lines.map((l,j)=>(
+                    {item.lines.map((l, j) => (
                       <div key={j} className="ct-item-line">{l}</div>
                     ))}
                   </div>
@@ -265,7 +267,7 @@ export default function Contact() {
 
               <div className="ct-btns">
                 <a
-                  href="https://wa.me/923333664912"
+                  href="https://wa.me/923145230994"
                   target="_blank"
                   rel="noreferrer"
                   className="ct-btn ct-btn-main"
@@ -275,7 +277,7 @@ export default function Contact() {
 
                 <button
                   className="ct-btn ct-btn-outline"
-                  onClick={()=>document.getElementById('getintouch')?.scrollIntoView({behavior:'smooth'})}
+                  onClick={() => document.getElementById('getintouch')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Send Enquiry
                 </button>
@@ -283,16 +285,16 @@ export default function Contact() {
 
             </div>
 
-            {/* RIGHT */}
+            {/* RIGHT — Map */}
             <div className="ct-map reveal">
-              <div className="ct-badge">📍 Satellite Town</div>
+              <div className="ct-badge">📍 Satellite Town, Rawalpindi</div>
 
               <iframe
                 title="Location"
                 src={`https://maps.google.com/maps?q=${LAT},${LNG}&z=16&output=embed`}
                 width="100%"
                 height="520"
-                style={{border:0}}
+                style={{ border: 0 }}
                 loading="lazy"
               />
             </div>
